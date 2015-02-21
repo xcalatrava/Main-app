@@ -8,8 +8,8 @@
 }
 
 .btn-portada{
-    top: 200px;
-	margin-top: 7%;
+    top: 100px;
+/*	margin-top: %;*/
 	-webkit-border-top-right-radius: 25px;
 	-webkit-border-bottom-right-radius: 25px;
 	-moz-border-radius-topright: 25px;
@@ -88,7 +88,10 @@
 #20 { background-image: url("../images/20.jpg"); }
 #21 { background-image: url("../images/21.jpg"); }
 
+
 #carta-baraja{
+    width: 75%;
 	margin: 10% auto;
+
 	display:block;
 }

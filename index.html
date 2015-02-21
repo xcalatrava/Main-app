@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Core App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquerymobile.js"></script>
+    <script src="js/kinetic.js"></script>
+    <script src="js/KineticPlugin.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineLite.min.js"></script>
+    <script src="js/definiciones.js"></script>
+    <script src="js/carta_dia.js"></script>
+    <script src="js/script.js"></script>
+
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/jquerymobile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+</head>
+
+<body>
+    <!-- Página principal -->
+    <section data-role="page" id="home">
+        <!-- 	<article role="main" class="ui-content"> -->
+        <a href="#baraja" id="btn-baraja" class="btn-portada ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Baraja</a>
+        <a href="#carta-dia" id="btn-carta-dia" class="btn-portada ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Carta del dia</a>
+        <a href="#page-num" id="btn-numerologia" class="btn-portada ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Numerologia en el tarot</a>
+        <a href="#page-rapida" id="btn-tirada-rapida" class="btn-portada ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Tirada rápida</a>
+        <a href="#page-completa" id="btn-tirada-meditacion" class="btn-portada ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Tirada con meditación</a>
+        <a href="#page-historial" id="btn-historico" class="btn-portada ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Historico</a>
+        <!--  -->
+    </section>
+
+
+<section data-role="page" id="baraja" data-theme="b">
+	<header data-role="header" data-position="fixed"><h1>Baraja</h1></header>
+	<article role="main" class="ui-content">
+
+    		<img id="carta-baraja" src="images/00.jpg">
+    </article>
+    <div data-role="popup" id="explicacion-arcano"></div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Incio</a>
+                </li>
+                <li><a href="#explicacion-arcano" data-icon="home" data-rel="popup" data-transition="pop" data-position-to="#carta-baraja">Basic Popup</a>
+                </li>
+                <li><a href="#" data-icon="gear">Setup</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+</section>
+
+
+
+    <section data-role="page" id="carta-dia" data-theme="b">
+		<header data-role="header" data-position="fixed"><h1>Carta del día</h1></header>
+
+        <div data-role="content" id="container-carta-dia"></div>
+        <div data-role="popup" id="explicacion-carta-dia"></div>
+        <div data-role="popup" id="explicacion-arcano"></div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Incio</a>
+                    </li>
+                    <li><a href="#" data-icon="back" id="reset_dia">Otra vez</a>
+                    </li>
+                    <li><a href="#explicacion-carta-dia" data-rel="popup" data-transition="pop" data-position-to="window" data-icon="info" id="info_dia">Explicación</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </section>
+
+
+
+<!-- page numerologia -->
+<section data-role="page" id="page-num" data-theme="b">
+	<header data-role="header" data-position="fixed"><h1>Numerología del tarot</h1></header>
+
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Incio</a>
+                </li>
+                <li><a href="#" data-icon="back" id="again-num">Otra vez</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+</section>
+<!-- page numerologia -->
+
+
+<!-- page tirada rapida -->
+<section data-role="page" id="page-rapida" data-theme="b">
+	<header data-role="header" data-position="fixed"><h1>Tirada rápida</h1></header>
+
+
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Incio</a>
+                </li>
+			<li><a href="#" data-icon="info">Info</a>
+                </li>
+                <li><a href="#" data-icon="back" id="again-rapida">Otra vez</a>
+                </li>
+              	<li><a href="#" data-icon="comment">Ayuda</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+</section>
+<!-- page tirada rapida -->
+
+
+<!-- page tirada completa -->
+<section data-role="page" id="page-completa" data-theme="b">
+	<header data-role="header" data-position="fixed"><h1>Tirada completa</h1></header>
+	<article role="main" class="ui-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</p>
+	</article>
+
+
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Incio</a>
+                </li>
+              	<li><a href="#" data-icon="comment">Ayuda</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+</section>
+<!-- page tirada completa -->
+
+
+<!-- page historial -->
+<section data-role="page" id="page-historial" data-theme="b">
+	<header data-role="header" data-position="fixed"><h1>Historial</h1></header>
+	<article role="main" class="ui-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Incio</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+</section>
+<!-- page historial -->
+
+</body>
+
+</html>
